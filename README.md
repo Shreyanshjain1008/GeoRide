@@ -25,7 +25,10 @@ georide/
 │   └── Dockerfile
 ├── frontend/
 │   ├── src/
-│   ├── public/
+|   │   └── components/
+|   |       └── assets/
+|   |       └── utils/
+│   ├── index.html
 │   ├── package.json
 │   └── vite.config.js
 └── README.md
