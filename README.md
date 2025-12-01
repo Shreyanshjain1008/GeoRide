@@ -1,97 +1,188 @@
-# GeoRide — Minimal Full‑Stack Ride Booking Starter
+# GeoRide – Real-Time Ride Booking App (FastAPI + React + Stripe)
 
-GeoRide is a minimal, extendable starter for a ride-booking platform using **FastAPI (Python)** as the backend and **React (Vite)** as the frontend. This template demonstrates essential ride-hailing features such as fare estimation, ride creation, and real‑time tracking.
+GeoRide is a modern full-stack ride-booking web application built with FastAPI, React (Vite), Stripe Payments, SQLModel, and Leaflet Maps.
+Users can search locations, estimate fares, book rides, and pay securely using Stripe — all in real time.
 
----
+# Features:
 
-## 🚀 Features
+🧭 Ride Booking
 
-* 🌍 **FastAPI backend** with distance estimation using Haversine formula
-* 🗄️ **SQLite + SQLModel** (simple local database)
-* 🔌 **WebSocket channels** for rider & driver
-* 🗺️ **React + Leaflet map UI**
-* 🚗 **Simulated driver movement**
-* 📦 Clean project structure
+• Search pickup and drop locations using OpenStreetMap Nominatim API
 
----
+• Auto-suggestions with debounce optimization
 
-## 📁 Project Structure
+• Real-time ride assignment
 
-```
-georide/
+💳 Integrated Payments (Stripe)
+
+• Secure card payments with Stripe Payment Intent API
+
+• Works with INR (₹) using Stripe
+
+• Payment required before confirming ride
+
+🗺️ Interactive Maps (Leaflet)
+
+• Live pickup & drop visualization
+
+• Auto-fit map bounds
+
+• Clean & responsive UI
+
+🔐 Authentication
+
+# User login / registration
+
+• JWT-based authentication
+
+• Password hashing using Passlib + bcrypt
+
+# 🧩 Modern Frontend
+
+• Vite + React
+
+• Dark UI theme
+
+• Smooth animations & custom UX elements
+
+• Swipe-down payment animation
+
+• Dashboard and Entry page animations (GIFs)
+
+# 🛠️ Tech Stack:
+
+--> 1.Frontend
+
+• React (Vite)
+
+• Stripe.js + @stripe/react-stripe-js
+
+• Leaflet.js
+
+• Modern CSS (custom)
+
+• Vite environment variables
+
+--> 2. Backend
+
+• FastAPI
+
+• SQLModel + SQLAlchemy
+
+• JWT authentication
+
+• Stripe Python SDK
+
+• SQLite database
+
+• CORS enabled
+
+# 📁 Project Structure
+
+GeoRide/
+│
 ├── backend/
 │   ├── app/
-│   ├── requirements.txt
-│   └── Dockerfile
+│   │   ├── main.py
+│   │   ├── db.py
+│   │   ├── models.py
+│   │   ├── payments.py
+│   │   ├── auth.py
+│   │   ├── rides.py
+│   │   └── utils/
+│   ├── venv/
+│   └── requirements.txt
+│
 ├── frontend/
 │   ├── src/
-|   │   └── components/
-|   |       └── assets/
-|   |       └── utils/
+│   │   ├── components/
+│   │   ├── assets/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── styles.css
 │   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
+│   ├── .env
+│   └── package.json
+│
 └── README.md
-```
 
----
+# ⚙️ Environment Variables
+--> Backend .env
 
-## 🛠️ Requirements
+STRIPE_SECRET_KEY=sk_test_**********************
+JWT_SECRET=my_jwt_secret
 
-* Python **3.11+**
-* Node.js **18+**
+--> Frontend .env
 
----
+VITE_API_BASE= http://localhost:8000
+VITE_STRIPE_PUBLISHABLE_KEY=pk_test_*********************
 
-## 🧩 Backend Setup (FastAPI)
+# 🔧 Installation & Setup
 
-```bash
+-->🖥️ Backend Setup
+
 cd backend
-python -m venv venv
-./venv/biScripts/activate
 pip install -r requirements.txt
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-```
+uvicorn app.main:app --reload
 
-Backend runs at **[http://localhost:8000](http://localhost:8000)**.
+Backend runs at:
 
----
+http://localhost:8000
 
-## 🎨 Frontend Setup (React + Vite)
+--> 🌐 Frontend Setup
 
-```bash
 cd frontend
 npm install
 npm run dev
-```
 
-Frontend runs at **[http://localhost:5173](http://localhost:5173)**.
+Frontend runs at:   http://localhost:5173
 
----
+# 💳 Stripe Test Cards
 
-## 🔧 Environment Variables
+4242 4242 4242 4242
+Expiry: Any future date
+CVV: 123
 
-| Variable        | Purpose                | Default                                        |
-| --------------- | ---------------------- | ---------------------------------------------- |
-| `DATABASE_URL`  | Override SQLite DB     | sqlite:///./georide.db                         |
-| `VITE_API_BASE` | Frontend → Backend URL | [http://localhost:8000](http://localhost:8000) |
+# 🎥 Live Animations Included
 
----
+• Dashboard GIF on dashboard page
 
-## 🧪 Demo Flow
+• Entry GIF beside “Book a Ride”
 
-1. Enter pickup & drop coordinates
-2. Click **Get Estimate**
-3. Click **Request Ride** → Creates a ride in DB
-4. Click **Simulate Driver** → WebSocket sends live driver location updates
+• Swipe-down payment animation on payment page
 
----
+# 🧪 Testing
 
-## 🧭 Roadmap
+Check backend status:  http://localhost:8000/docs
 
-* Real driver assignment
-* Live navigation UI
-* Payment gateway integration
-* Notifications
-* Admin panel
 
+# Use Swagger to test:
+
+• Authentication
+
+• Ride estimation
+
+• Payment Intent
+
+• Ride confirmation
+
+# 🚀 Future Enhancements
+
+• Live driver tracking
+
+• Push notifications
+
+• Ride history page
+
+• Profiles & settings
+
+• Google Maps integration
+
+# 🧑‍💻 Author
+
+Shreyansh Jain
+Backend Developer • AI & ML • Full-Stack Projects
+
+⭐ Support
+
+If you like this project, consider ⭐ starring the repo!
