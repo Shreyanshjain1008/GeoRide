@@ -124,25 +124,29 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_test_*********************
 -->🖥️ Backend Setup
 
 cd backend
+
 pip install -r requirements.txt
+
 uvicorn app.main:app --reload
 
-Backend runs at:
-
-http://localhost:8000
+Backend runs at:   http://localhost:8000
 
 --> 🌐 Frontend Setup
 
 cd frontend
+
 npm install
+
 npm run dev
 
-Frontend runs at:   http://localhost:5173
+Frontend runs at:    http://localhost:5173
 
 # 💳 Stripe Test Cards
 
 4242 4242 4242 4242
+
 Expiry: Any future date
+
 CVV: 123
 
 # 🎥 Live Animations Included
@@ -155,7 +159,7 @@ CVV: 123
 
 # 🧪 Testing
 
-Check backend status:  http://localhost:8000/docs
+Check backend status:   http://localhost:8000/docs
 
 
 # Use Swagger to test:
@@ -183,6 +187,7 @@ Check backend status:  http://localhost:8000/docs
 # 🧑‍💻 Author
 
 Shreyansh Jain
+
 Backend Developer • AI & ML • Full-Stack Projects
 
 ⭐ Support
