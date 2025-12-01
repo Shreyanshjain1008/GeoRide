@@ -143,7 +143,7 @@ Frontend runs at:    http://localhost:5173
 
 # 💳 Stripe Test Cards
 
-4242 4242 4242 4242
+Number: 4242 4242 4242 4242
 
 Expiry: Any future date
 
