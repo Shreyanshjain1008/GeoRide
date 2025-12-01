@@ -110,11 +110,13 @@ GeoRide/
 --> Backend .env
 
 STRIPE_SECRET_KEY=sk_test_**********************
+
 JWT_SECRET=my_jwt_secret
 
 --> Frontend .env
 
 VITE_API_BASE= http://localhost:8000
+
 VITE_STRIPE_PUBLISHABLE_KEY=pk_test_*********************
 
 # 🔧 Installation & Setup
