@@ -139,7 +139,7 @@ npm install
 
 npm run dev
 
-Frontend runs at:   http://localhost:5173
+Frontend runs at:    http://localhost:5173
 
 # 💳 Stripe Test Cards
 
@@ -159,7 +159,7 @@ CVV: 123
 
 # 🧪 Testing
 
-Check backend status:  http://localhost:8000/docs
+Check backend status:   http://localhost:8000/docs
 
 
 # Use Swagger to test:
