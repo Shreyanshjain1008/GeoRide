@@ -1,4 +1,4 @@
-# GeoRide – Real-Time Ride Booking App (FastAPI + React + Stripe)
+# GeoRide – Real-Time Ride Booking Website (FastAPI + React + Stripe)
 
 GeoRide is a modern full-stack ride-booking web application built with FastAPI, React (Vite), Stripe Payments, SQLModel, and Leaflet Maps.
 Users can search locations, estimate fares, book rides, and pay securely using Stripe — all in real time.
