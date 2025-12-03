@@ -17,6 +17,7 @@ origins = [
     "http://localhost:5173",
     "http://localhost:3000",
     "http://localhost:8000",
+    "geo-ride.vercel.app"
 ]
 
 app.add_middleware(
